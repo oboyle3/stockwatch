@@ -68,9 +68,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'stockwatch.wsgi.application'
 
-
+#here db
 # Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+# https://docs.djangoproject.com/en/5.2/ref/settings/#databases  
 
 DATABASES = {
     'default': {
