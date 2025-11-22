@@ -15,7 +15,7 @@ steps:
       git config --global user.name "AzurePipeline"
 
       echo "Adding Azure DevOps remote..."
-      git remote add azure https://$(AZURE_PAT)@dev.azure.com/oboyle3patrick/stockwatch/_git/stockwatch
+      #git remote add azure https://$(AZURE_PAT)@dev.azure.com/oboyle3patrick/stockwatch/_git/stockwatch
 
       echo "Pushing GitHub -> Azure DevOps"
       git push azure main --force
