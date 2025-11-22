@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - main     # When GitHub main changes -> sync to Azure DevOps
+      - main     # When GitHub main changes -> sync to Azure DevOps https://dev.azure.com/oboyle3patrick/stockwatch/_git/stockwatch
 
 pool:
   vmImage: ubuntu-latest
