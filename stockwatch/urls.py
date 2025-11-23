@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import homepage#added
+from core.views import dashboard
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',homepage, name='homepage'),
+    path('dashboard/',dashboard, name='dashboard'),
 ]
