@@ -2,11 +2,34 @@
 <html>
 <head>
     <title>Dashboard - StockWatch</title>
+    <h1>go to stock page</h1>
 </head>
 <body>
     <h1>Dashboard</h1>
     <p>This is where your stock data will go.</p>
+<h1>All Stocks</h1>
 
-    <a href="/">Back to Home</a>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+    </tr>
+
+    {% for stock in stocks %}
+    <tr>
+        <td>{{ stock.name }}</td>
+        <td>{{ stock.symbol }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="2">No stocks found.</td>
+    </tr>
+    {% endfor %}
+</table>
+    <h3>Links below</h3>
+    <a href="/">Back to Home</a><br><br>
+    <a href="{% url 'addstock' %}">Go to add stock page</a> <br><br>
+    <a href="{% url 'addstock' %}">Go to delete stock page</a> <br><br>
+    
 </body>
 </html>

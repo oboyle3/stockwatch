@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>add stock page</title>
+</head>
+<body>
+    <h1>add a stock</h1>
+    <form method = "POST">
+        {% csrf_token %}
+        <label>company name</label>
+        <input type="text" name ="name"><br><br>
+        <label>stock symbol</label>
+        <input type="text" name ="symbol"><br><br>
+        <button type="submit">add stockj</button>
+
+
+    </form>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

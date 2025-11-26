@@ -4,7 +4,26 @@
     <title>StockWatch</title>
 </head>
 <body>
-    <h1>Welcome to StockWatch <a href="{% url 'dashboard' %}">Go to Dashboard</a> </h1>
+    <h1>Welcome to StockWatch <a href="{% url 'dashboard' %}">Go to Dashboard</a> <a href="{% url 'mlb' %}">Go to mlb</a> </h1>
     <p>Track your favorite stocks in real-time.</p>
+    <h1>All Stocks</h1>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Name</th>
+        <th>Symbol</th>
+    </tr>
+
+    {% for stock in stocks %}
+    <tr>
+        <td>{{ stock.name }}</td>
+        <td>{{ stock.symbol }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="2">No stocks found.</td>
+    </tr>
+    {% endfor %}
+</table>
 </body>
 </html>

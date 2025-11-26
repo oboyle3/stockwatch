@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete stock page</title>
+</head>
+<body>
+   <h1>All Stocks</h1>
+
+<ul>
+    {% for stock in stocks %}
+        <li>
+            {{ stock.name }} ({{ stock.symbol }})
+            — <a href="{% url 'delete_stock' stock.id %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

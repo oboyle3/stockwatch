@@ -16,11 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import homepage#added
-from core.views import dashboard
+
+from core.views import addstock, delete_stock, homepage#added
+from core.views import dashboard, mlb
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',homepage, name='homepage'),
     path('dashboard/',dashboard, name='dashboard'),
+    path('addstock/',addstock, name='addstock'),
+    path("delete/<int:id>/", delete_stock, name="delete_stock"),
+    path('mlb/', mlb ,name="mlb")
 ]
